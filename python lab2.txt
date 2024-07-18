@@ -1,0 +1,25 @@
+#1. Using input function take two number and then swap the number
+a=input("enter the first number:")                              #using input function to take the input from the user
+b=input("enter the second the number:")                         #using input function to take the input from the user
+a,b=b,a                                                         #this statement indicates the swap of two numbers
+print("after swap of two numbers")                              #print the statement
+print(a,b)                                                      #print the statement
+
+output:
+enter the first number:8
+enter the second the number:9
+after swap of two numbers
+9 8
+.....................................................................................................................................................................
+
+#2. Using input() function take one number from the user and using ternary operators check whether the number is even or odd 
+num1=int(input("enter any number:"))             #using input function to take the input from the user
+if num1%2==0:           						 #using if condition and ternary operator
+    print("the entered number is even")          #print the statement 
+else:                                            #using else
+    print("the entered number is odd")           #print the statement
+
+output:
+enter any number:6
+the entered number is even
+

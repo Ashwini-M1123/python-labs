@@ -1,0 +1,105 @@
+1. Print the first 10 natural numbers using for loop.
+for i in range(1,11):                          #using for loop to print 10 natural numbers
+       print(i)                                #print the result
+
+output:   
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+.........................................................................................................................
+2. Python program to check if the given string is a palindrome 
+def is_palindrome(s):                                                               
+    s = s.lower()                                                            # Convert the string to lowercase to           
+                                                                               handle case sensitivity   
+ 
+    reversed_s = s[::-1]                                                      # Reverse the string 
+    return s == reversed_s                                                     # Check if the original string is equal                        
+                                                                                 to its reverse
+string = input("Enter a string: ")
+if is_palindrome(string):
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")
+
+output:      Enter a string: mam
+                The string is a palindrome.
+..............................................................................................................................
+3. Python program to check if a given number is an Armstrong number 
+def is_armstrong_number(num):
+    num_str = str(num)                                                             # Convert the number to a string to 
+                                                                                                 calculate the number of digits
+    num_digits = len(num_str)
+        sum = 0
+    for digit in num_str:                                                             # Iterate through each digit in the
+                                                                                                      number
+        sum += int(digit) ** num_digits                                        # Add the nth power of the digit                     
+                                                                                                         to the sum
+    return sum == num                                                              # Check if the sum is equal to the 
+                                                                                                       original number
+number = int(input("Enter a number: "))
+if is_armstrong_number(number):
+    print(number, "is an Armstrong number.")
+else:
+    print(number, "is not an Armstrong number.")
+
+output:      Enter a number: 5
+                 5 is an Armstrong number.
+....................................................................................................................................
+4. Python program to get the Fibonacci series between 0 to 50 
+def fibonacci_series(n):
+    a, b = 0, 1                                                      # Initialize variables for the first two Fibonacci
+                                                                             number
+    fibonacci_series = []                                       # Initialize an empty list to store the Fibonacci
+                                                                               series
+    while a <= n:                                                    # Generate Fibonacci numbers until the nth
+                                                                             number is less than or equal to 50
+        fibonacci_series.append(a)
+        a, b = b, a + b                                                       # Calculate the next Fibonacci number
+        return fibonacci_series 		3. Python program to check if a given number is an Armstrong number 
+def is_armstrong_number(num):
+    num_str = str(num)                                                             # Convert the number to a string to 
+                                                                                                 calculate the number of digits
+    num_digits = len(num_str)
+        sum = 0
+    for digit in num_str:                                                             # Iterate through each digit in the
+                                                                                                      number
+        sum += int(digit) ** num_digits                                        # Add the nth power of the digit                     
+                                                                                                         to the sum
+    return sum == num                                                              # Check if the sum is equal to the 
+                                                                                                       original number
+number = int(input("Enter a number: "))
+if is_armstrong_number(number):
+    print(number, "is an Armstrong number.")
+else:
+    print(number, "is not an Armstrong number.")
+
+output:      Enter a number: 5
+                 5 is an Armstrong number.
+..................................................................................................................................
+4. Python program to get the Fibonacci series between 0 to 50 
+def fibonacci_series(n):
+    a, b = 0, 1                                                 # Initialize variables for the first two Fibonacci
+                                                                             number
+    fibonacci_series = []                                       # Initialize an empty list to store the Fibonacci
+                                                                               series
+    while a <= n:                                               # Generate Fibonacci numbers until the nth
+                                                                             number is less than or equal to 50
+        fibonacci_series.append(a)
+        a, b = b, a + b                                         # Calculate the next Fibonacci number
+        return fibonacci_series 		
+
+# Call the function to get the Fibonacci series between 0 to 50
+fibonacci_series_50 = fibonacci_series(50)
+print("Fibonacci series between 0 to 50:")
+print(fibonacci_series_50)
+
+output:        Fibonacci series between 0 to 50:
+                     [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+

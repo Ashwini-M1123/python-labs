@@ -1,0 +1,77 @@
+#1. write a function in python to read the content from a text file "ABC.txt" line by line and display the same on screen
+
+
+def read_and_display(filename):
+    file=open(filename,'r')  #open the file in read mode
+    for line in file: #read each line and display it
+        print(line,end='') #use end=" to avoid extra newline.
+    file.close()
+filename="D:\pyton.prog\ABC.txt"
+read_and_display(filename)
+
+output:
+ashwini
+this is the example file to display the file on the screen line by line.
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#2.write a function in python to count and display the total number of words in a text file "ABC.txt"
+
+def count_words_in_file(filename):
+   file=open(filename,'r')  #open the file in read mode
+   content=file.read() #read the entire content of the file
+   words=content.split() #split the content into words
+   word_count=len(words) #display the word count
+   print(f"total number of words in '{filename}':{word_count}")# display the word count
+   file.close() #close the file after reading
+filename= "D:\python.prog\ABC.txt"
+count_words_in_file(filename)
+ 
+
+output:
+total number of words in 'D:\"python.prog"\ABC.txt':16
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#3. write a function i n python to count uppercase character in a text file "ABC.txt".
+
+def count_uppercase_in_file(filename):
+    file = open(filename, 'r')  # Open the file in read mode
+    uppercase_count = 0  # Initialize a counter for uppercase characters
+    
+    # Iterate through each line in the file
+    for line in file:    
+        # Iterate through each character in the line
+        for char in line:
+            # Check if the character is uppercase
+            if char.isupper():
+                uppercase_count += 1  # Increment the counter for uppercase characters
+    
+    file.close()  # Close the file after reading
+    
+    # Display the total count of uppercase characters
+    print(f"Total number of uppercase characters in '{filename}': {uppercase_count}")
+filename ="D:\"python.prog\ABC.txt" 
+count_uppercase_in_file(filename)
+
+output:
+Total number of uppercase characters in 'D:\"python.prog\ABC.txt': 0
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+#4.Write a function display_words() in python to read lines from a text file "story.txt", and display those words, which are less than 4 characters.
+
+def display_words(filename):
+    file = open(filename, 'r')  # Open the file in read mode
+    lines = file.readlines()  # Read all lines from the file into a list
+    for line in lines: #iterate through each line in the list of lines
+        words = line.split()
+        for word in words: #iterate through each word in the list of words
+            # Check if the length of the word is less than 4 characters
+            if len(word) < 4:
+                print(word) #display the word
+    
+    file.close()  # Close the file after reading
+filename = "D:\"python.prog"\story.txt"
+display_words(filename)
+output:
+is
+the

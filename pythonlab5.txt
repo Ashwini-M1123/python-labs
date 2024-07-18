@@ -1,0 +1,42 @@
+#1. write a python program to reverse a number using a while loop
+
+
+number=int(input("enter a number:"))                #accept a number from the user
+reversed_number=0                                   #initialize a variable to store a reversed number
+while number > 0:                                   #reverse the number using while loop
+    last_digit=number % 10                          # get the last digit of a number
+    reversed_number=reversed_number *10+ last_digit #append the  last digit to the reversed number
+    number = number // 10                           #remove the last digit from the original number
+print("Reversed number:",reversed_number)           #display the reversed number
+
+
+#2.Write a python program to check whether a number is palindrome or not?
+
+num=int(input("enter a number:"))                       # accept the number from the user
+num_str=str(num)                                        #convert the number to string  to easily check for pallindrome.
+if num_str==num_str[::-1]:                              #check if the number is a pallindrome or not
+        print(num,"is a pallindrome")
+else:
+    print(num,"is not a pallindrome")
+
+
+#3.Write a python program finding the factorial of a given number using a while loop.
+
+number=int(input("enter a number:"))            # accept the number from the user
+factorial=1 #initialize variables
+current_number=1
+while current_number <= number:                 #calculate the factorial using while loop
+    factorial*= current_number
+    current_number +=1
+print("factorial of",number,"is",factorial)     #display the factorial of the given number
+
+
+#4.Accept numbers using input() function until the user enters 0. If user input 0 then break the while loop and display the sum of all the numbers.
+
+total_sum = 0  #initialize the variables
+while True:
+    number = int(input("Enter a number (enter 0 to stop): "))
+    if number == 0:                                  # Check if the number is 0, if so, break out of the loop
+        break
+    total_sum += number                              # Add the number to the total sum
+print("Sum of all the numbers entered:", total_sum)  # Display the sum of all the numbers entered

@@ -1,0 +1,129 @@
+#1.Write a Python program to Count all letters, digits, and special symbols from the given 
+#string Input = “P@#yn26at^&i5ve” 
+#Output: Chars = 8 Digits = 2 Symbol = 3
+
+def count_characters(input_string):
+    chars = 0
+    digits = 0
+    symbols = 0
+
+    for char in input_string:
+        if char.isalpha():                      # Check if character is a letter
+            chars += 1
+        elif char.isdigit():                    # Check if character is a digit
+            digits += 1
+        else:
+            symbols += 1  # Otherwise, consider it as a symbol
+
+    return chars, digits, symbols
+
+input_string = "P@#yn26at^&i5ve"
+
+# Call the function to count characters, digits, and symbols
+chars_count, digits_count, symbols_count = count_characters(input_string)
+
+print(f"Chars = {chars_count} Digits = {digits_count} Symbols = {symbols_count}")  # Output the counts
+
+output:
+Chars = 8 Digits = 3 Symbols = 4
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#2.Write a Python program to remove duplicate characters of a given string. 
+#Input = “String and String Function” 
+#Output: String and Function
+
+def remove_duplicates(input_string):
+                                                                                        # Use a set to keep track of seen characters
+    seen = set()
+    result = []
+
+    for char in input_string:
+        if char not in seen:
+            seen.add(char)
+            result.append(char)
+
+    # Join the list of unique characters to form the final string
+    return ''.join(result)
+
+
+input_string = "String and String Function"
+
+output_string = remove_duplicates(input_string)			# Call the function to remove duplicates
+
+print("Output:", output_string)                         # Output the result
+
+output:
+Output: String adFuco
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+#3.Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+#Input = “Hell0 W0rld ! 123 * # welcome to pYtHoN”
+#Output: UpperCase : 5 LowerCase : 18 NumberCase : 5 SpecialCase : 11
+
+def count_characters(input_string):
+    uppercase_count = 0
+    lowercase_count = 0
+    numeric_count = 0
+    special_count = 0
+
+    for char in input_string:
+        if char.isupper():
+            uppercase_count += 1
+        elif char.islower():
+            lowercase_count += 1
+        elif char.isdigit():
+            numeric_count += 1
+        else:
+            special_count += 1
+
+    return {
+        "UpperCase": uppercase_count,
+        "LowerCase": lowercase_count,
+        "NumberCase": numeric_count,
+        "SpecialCase": special_count
+    }
+
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+result = count_characters(input_string)
+
+print("UpperCase:", result["UpperCase"])
+print("LowerCase:", result["LowerCase"])
+print("NumberCase:", result["NumberCase"])
+print("SpecialCase:", result["SpecialCase"])
+
+output:
+UpperCase: 5
+LowerCase: 18
+NumberCase: 5
+SpecialCase: 11
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#4.Write a Python Count vowels in a string 
+#input= “Welcome to Python Assignment” 
+#Output: Total vowels are: 8
+
+def count_vowels(input_string):
+    
+    vowels = "aeiouAEIOU"                                           # Define vowels
+    vowel_count = 0                                                 # Initialize a counter for vowels
+    
+                                                                    # Loop through each character in the input string
+    for char in input_string:
+        if char in vowels:                                          # Check if the character is a vowel
+            vowel_count += 1
+    
+    return vowel_count
+
+# Test the function with the provided input
+input_string = "Welcome to Python Assignment"
+total_vowels = count_vowels(input_string)
+
+print(f"Total vowels are: {total_vowels}")
+
+output:
+Total vowels are: 8

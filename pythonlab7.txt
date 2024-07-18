@@ -1,0 +1,115 @@
+1.write a python program to count the occurences of each word in  a given sentence.
+
+
+def words(sentence):                                    #split the sentence into words
+    words = sentence.split()
+    word_count={}                                       #initialize an empty dictionary to store word counts
+    for word in words:                                  #iterate through each word in the list of words
+        if word in word_count:                          #increment the count for this word
+            word_count[word]+=1
+        else:
+            word_count[word]=1
+        return word_count
+input_sentence="To change the overall look of your document.To change the look available in the gallery"
+result=words(input_sentence)
+for word,count in result.items():
+    print(f"'{word}'occurs {count}time(s)") #print the word counts.
+
+output:
+'To'occurs 1time(s)
+..........................................................................................................................................
+
+#2.Write a Python program to remove a newline in Python 
+#String = "\nBest \nDeeptech \nPython \nTraining\n"
+
+
+string_with_newlines = "\nBest \nDeeptech \nPython \nTraining\n"
+
+                                                                    # Remove newline characters using str.replace()
+string_without_newlines = string_with_newlines.replace('\n', '')            
+
+print("Original String:")
+print(repr(string_with_newlines))                                   # Display string with newline characters
+
+print("\nString without Newlines:")
+print(repr(string_without_newlines))                                # Display modified string
+
+output:
+Original String:
+'\nBest \nDeeptech \nPython \nTraining\n'
+
+String without Newlines:
+'Best Deeptech Python Training'
+..........................................................................................................................................
+
+#3.Write a Python program to reverse words in a string
+#String = “Deeptech Python Training”
+
+def reverse_words(sentence):                            # Split the sentence into a list of words
+    words = sentence.split()
+    
+
+    reversed_words = words[::-1]                        # Reverse the order of words using list slicing
+    
+                                                        # Join the reversed words to form a new sentence
+    reversed_sentence = ' '.join(reversed_words)
+    
+    return reversed_sentence
+
+input_string = "Deeptech Python Training"               # Given string
+
+
+output_string = reverse_words(input_string)         # Call the function to reverse the words
+
+print("Original String:") 
+# Print the reversed sentence
+
+print(input_string)
+
+print("\nString with Reversed Words:")
+print(output_string)
+
+output:
+String with Reversed Words:
+Training Python Deeptech
+..........................................................................................................................................
+
+
+
+#4.Write a Python program to count and display the vowels of a given text String=”Welcome to python Training
+
+def count_and_display_vowels(text):
+    # Define a set of vowels (both lowercase and uppercase)
+    vowels = "aeiouAEIOU"
+    
+    # Initialize a dictionary to store vowel counts
+    vowel_counts = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}         
+    
+    
+    # Iterate through each character in the text
+    for char in text:
+        # Check if the character is a vowel
+        if char in vowels:
+            # Increment the count for this vowel (convert to lowercase for uniformity)
+            lowercase_char = char.lower()
+            vowel_counts[lowercase_char] += 1
+    
+    print("Vowel counts in the text:")         # Display the vowel counts
+
+    for vowel, count in vowel_counts.items():
+        print(f"{vowel}: {count}")
+
+
+input_text = "Welcome to python Training"               # Given text string
+
+# Call the function to count and display vowels
+count_and_display_vowels(input_text)
+
+output:
+Vowel counts in the text:
+a: 1
+e: 2
+i: 2
+o: 3
+u: 0
+.........................................................................................................................................

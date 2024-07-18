@@ -1,0 +1,126 @@
+
+
+Q.1. Write a Python program to count the occurrences of each word in a given sentence 
+
+//Code
+
+# main function
+
+def word_occurance(str):
+
+    # Create an empty dictionary named 'counts' to store word frequencies.
+    count_word = dict()
+    
+    # Split the input string 'str' into a list of words using spaces as separators and store it in the 'words' list.
+    words = str.split()
+
+    # Iterate through each word in the 'words' list.
+    for word in words:
+    
+     # Check if the word is already in the 'counts' dictionary.
+        if word in count_word:
+            count_word[word] += 1
+        else:
+            count_word[word] = 1
+
+    # Return the 'counts' dictionary, which contains word frequencies.
+    return count_word
+
+# Call the word_count function with an input sentence and print the results.
+print(word_occurance('To change the overall look of your document. To change the look available in the gallery')) 
+
+
+//Output
+
+{'To': 2, 'change': 2, 'the': 3, 'overall': 1, 'look': 2, 'of': 1, 'your': 1, 'document.': 1, 'available': 1, 'in': 1, 'gallery': 1}
+
+**----------------------------------------------------------Assignment - 2---------------------------------------------------------------**
+
+Q. 2. Write a Python program to remove a newline in Python 
+
+//code
+
+def remove_newline(text):
+    new_text = ''
+    for char in text:
+        if char != '\n':
+            new_text += char
+    return new_text
+
+# Get input from the user
+text_with_newline =  "\nBest \nDeeptech \nPython \nTraining\n" 
+
+print("Before removing new line character: " , text_with_newline)
+
+# Remove newline characters
+text_without_newline = remove_newline(text_with_newline)
+
+# Print the result
+print("Text without newline character:", text_without_newline)
+
+//Output
+
+Before removing new line character:  
+Best
+Deeptech
+Python
+Training
+
+Text without newline character: Best Deeptech Python Training
+
+**----------------------------------------------------------Assignment - 3---------------------------------------------------------------**
+
+Q. 3. Write a Python program to reverse words in a string 
+
+//Code
+
+# Main Function
+def reverse_string(text):
+    # slicing synatx with along with last charcter
+    return text[::-1]
+
+word = 'Deeptech Python Training'
+print("Original string is : ", word)
+
+reverse_txt = reverse_string(word)
+print("Reverse string is  : " , reverse_txt)   
+
+//Output
+
+Original string is :  Deeptech Python Training
+
+Reverse string is  :  gniniarT nohtyP hcetpeeD
+
+**----------------------------------------------------------Assignment - 4---------------------------------------------------------------**
+
+Q. 4. Write a Python program to count and display the vowels of a given text 
+
+//code
+
+def vowels_count(text):
+    vowels = "aeiouAEIOU"
+    vowels_count = 0
+    vowels_list = []
+
+    for char in text:
+        if char in vowels:
+            vowels_count += 1
+            vowels_list.append(char)
+
+    
+    # Print the list of vowels found, separated by commas
+    print("Vowels:", ", ".join(vowels_list))
+    # Print the total number of vowels found in the text
+    print("Total number of vowels:", vowels_count)
+
+# Given text string
+text = "Welcome to Python Training"
+
+# Call the function to count and display vowels
+vowels_count(text)
+
+//output
+
+Vowels: e, o, e, o, o, a, i, i
+Total number of vowels: 8
+

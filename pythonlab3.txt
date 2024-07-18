@@ -1,0 +1,100 @@
+1 a python program to check leap year
+
+
+year=int(input("enter a year:"))                        #input statement to take the input from the user
+if(year%4==0 and year% 100!=0)or(year %400==0):         #if statement to check the given condition satisfies or not.
+    print(year,"is a leap year")                        #print statement to display the output
+else:                                                   #else block
+    print(year,"is not a leap year")                    #print statement to display the output
+
+
+
+output:
+enter a year:2020
+2020 is a leap year
+..........................................................................................................................................
+2 a python program to find the largest among three numbers
+
+
+
+number1=int(input("enter the first number:"))                   #input statement to take the input from the user(first number)
+number2=int(input("enter the second number:"))                  #input statement to take the input from the user(second number)
+number3=int(input("enter the third number:"))                   #input statement to take the input from the user(third number)
+if number1 >= number2 and number1>=number3:                     #if statement to check the given condition satisfies or not.
+    largest=number1
+elif number2>=number1 and number2>=number3:                     #elif statement
+    largest=number2
+else :                                                          #else block
+    largest = number3
+print("the largest number among ",number1,",",number2,",and ",number3,"is:",largest) #print statement to display the output
+
+output:
+enter the first number:2
+enter the second number:3
+enter the third number:6
+the largest number among  2 , 3 ,and  6 is: 6
+..........................................................................................................................................
+3 python program to check if a number is positive,negative or zero:
+
+
+num=int(input("enter a number:"))                     #input statement to take the input from the user
+if num>0:                                             #if statement to check the given condition satisfies or not.
+        print(num,"is positive")                                                                                                         
+elif num<0:                                           #elif statement
+    print(num,"is negative")                          #print statement to display the output
+else:                                                 #else block
+    print("the number is o")                          #print statement to display the output
+
+output:
+enter a number:7
+7 is positive
+..........................................................................................................................................
+
+4.A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys.
+The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000.
+On orders of more than Rs. 100 for key-based toys, a discount of 5% is given,
+and a discount of 10% is given on orders for electrical charging based toys of value more than Rs. 500.
+Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys, and electrical charging based toys respectively.
+Write a program that reads the product code and the orderamountand prints out the net amount that the customer is required to pay after the discount.'''
+
+
+
+product_code = int(input("Enter the product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): "))
+order_amount = int(input("Enter the order amount in Rs.: "))                      
+
+discount = 0
+
+if product_code == 1 and order_amount > 1000:  #if statement to check the given condition satisfies or not.
+    discount = 0.1
+elif product_code == 2 and order_amount > 100:  #elif statement
+    discount = 0.05
+elif product_code == 3 and order_amount > 500:  #elif statement
+    discount = 0.1
+
+net_amount = order_amount - (order_amount * discount)       #logic to find the net amount
+print("Net amount after discount: Rs.", net_amount)         #print statement to display the net amount
+
+
+output:
+Enter the product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): 1
+Enter the order amount in Rs.: 5000
+Net amount after discount: Rs. 4500.0
+..........................................................................................................................................
+
+5.A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+
+distance = int(input("Enter the distance traveled (in km): "))  #input statement to take the input from the user(distance travelled)
+
+if distance <= 50:                                              #if statement to check the given condition satisfies or not.
+    fare = distance * 8
+elif distance <= 100:                                           #elif statement
+    fare = distance * 10
+else:                                                           #else block where fare is calculated as distance*12
+    fare = distance * 12                                                                                                                                                                                                                         
+
+print("The total fare is:", fare, "Rs.")                        #print statement to display total fare amount in rupees-
+
+output:
+Enter the distance traveled (in km): 29
+The total fare is: 232 Rs.
+..........................................................................................................................................

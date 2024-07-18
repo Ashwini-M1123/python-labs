@@ -1,0 +1,69 @@
+1.Declare a div() function with two parameters. Then call the function and pass two numbers and display their division.
+
+
+
+def div(a,b):                           #defining the div function with two parameters
+    return a/b                          #return the division of two parameters
+num1=6                                  # assign the values which need to be divided
+num2=3
+result=div(num1,num2)                   #call the div function with the assigned values.
+print("The division result is:",result) # display the reult of the division
+
+output:
+
+The division result is: 2.0
+
+..........................................................................................................................................
+
+
+
+2.Declare a square() function with one parameter. Then call the function and pass one number and display the square of that number .
+
+
+def square(num):                        #define the square function with one parameter
+    return num**2                       # return the square of the parameter
+number=5                                #assign a value for which square needs to be calculated
+result=square(number)                   #call the square() function with the assigned value
+print("The square of",number,"is:",result)
+
+output:
+
+The square of 5 is: 25
+
+
+..........................................................................................................................................
+
+
+
+3.Using max() and min() functions display the maximum and minimum of 5 random numbers.
+
+
+import random                           #import the random module to generate random numbers
+random_numbers=[random.randint(1,10)    #generate 5 random numbers between 1 to 10 
+                for _ in range(5)]
+print("Random numbers:",random_numbers) #display the list of random numbers
+maximum=max(random_numbers)             # find the maximum number in the list using max function
+minimum=min(random_numbers)             # find the minimum number in the list using min function
+print("Maximum number:",maximum)        #display the maximum number from the list
+print("Minimum number:",minimum)        #display the minimum number from the list
+
+output:
+
+Random numbers: [10, 1, 3, 6, 5]
+Maximum number: 10
+Minimum number: 1
+
+.........................................................................................................................................
+
+
+4.Accept a name from the user and display that in lower case using lower() function
+
+
+name=input("enter your name:")                    #accept a name from the user
+lowercase_name=name.lower()                       #convert the name to lower case using the lower() function
+print("your name in lowercase:",lowercase_name)
+
+output:
+
+enter your name:MEGHA
+your name in lowercase: megha
